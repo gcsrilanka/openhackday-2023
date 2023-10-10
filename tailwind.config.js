@@ -21,6 +21,30 @@ module.exports = {
     },
     extend: {
       colors: {
+        manga: {
+          200: "#efedef",
+          300: "#c3bcc3",
+          400: "#655f67",
+        },
+        void: "#0f0913",
+        bavariangold: {
+          100: "#fffba4",
+          200: "#d2b863",
+          300: "#ad832d",
+          400: "#3d2e10",
+        },
+        bavarianblue: {
+          100: "#b2e3f0",
+          200: "#33b6d8",
+          300: "#14596b",
+          400: "#0c3640",
+        },
+        bavarianred: {
+          100: "#f8bdb9",
+          200: "#ec4237",
+          300: "#a3180f",
+          400: "#460a07",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

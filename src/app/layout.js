@@ -1,7 +1,8 @@
-import Navbar from "@/components/Navbar";
-import "./globals.css";
 import { JetBrains_Mono } from "next/font/google";
 import Footer from "@/components/Footer";
+import { cn } from "@/lib/utils";
+import Navbar from "@/components/Navbar";
+import "./globals.css";
 
 const jbmono = JetBrains_Mono({ subsets: ["latin"] });
 
@@ -12,8 +13,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={jbmono.className}>
+    <html lang="en" className="dark">
+      <body className={cn("dark:bg-void dark:text-white", jbmono.className)}>
         <Navbar />
         {children}
         <Footer />

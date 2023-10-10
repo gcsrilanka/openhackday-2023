@@ -24,7 +24,7 @@ const Countdown = () => {
 
   return (
     <div>
-      <h3 className="text-3xl font-bold">Countdown</h3>
+      <h3 className="text-4xl font-bold mb-2">Countdown</h3>
       <p className="text-xl">
         {countdown.days} days, {countdown.hours} hours, {countdown.minutes} minutes, {countdown.seconds} seconds
       </p>
