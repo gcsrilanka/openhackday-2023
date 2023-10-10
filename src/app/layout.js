@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { JetBrains_Mono } from "next/font/google";
+import Footer from "@/components/Footer";
 
 const jbmono = JetBrains_Mono({ subsets: ["latin"] });
 
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
       <body className={jbmono.className}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
