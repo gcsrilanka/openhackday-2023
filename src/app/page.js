@@ -1,45 +1,18 @@
 import Image from "next/image";
 import { GitBranch } from "lucide-react";
-
-import { Payment, columns } from "./components/columns";
-import { DataTable } from "./components/data-table";
 import Countdown from "./components/Countdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 
+import Leaderboard from "./components/Leaderboard";
+
 const HomePage = async () => {
-  async function getData() {
-    // Fetch data from your API here.
-    return [
-      {
-        id: "728ed52f",
-        rank: 1,
-        contributor: "John Doe",
-        points: 100,
-      },
-      {
-        id: "728ed52g",
-        rank: 2,
-        contributor: "Jane Doe",
-        points: 50,
-      },
-      {
-        id: "728ed52h",
-        rank: 3,
-        contributor: "John Smith",
-        points: 25,
-      },
-    ];
-  }
-
-  const data = await getData();
-
   return (
     <main className="container max-w-7xl my-8">
       <section className="flex gap-12">
         <div className="w-full flex-1 space-y-12">
-          <Image src="/hf10_horz_fcl_cmyk.png" width={1032} height={600} />
+          <Image src="/hf10_horz_fcl_cmyk.png" width={1032} height={600} alt="Hacktoberfest 2023 Logo" />
 
           <div className="flex gap-4 mt-6">
             <Countdown />
@@ -70,10 +43,7 @@ const HomePage = async () => {
         </div>
       </section>
 
-      <div className="py-10 w-full">
-        <h3 className="text-4xl font-bold mb-4">Leaderboard</h3>
-        <DataTable columns={columns} data={data} className="w-full" />
-      </div>
+      <Leaderboard />
 
       <section className="py-10 text-center max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold mb-4">Make Your Contribution</h2>
