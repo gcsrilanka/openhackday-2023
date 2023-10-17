@@ -24,30 +24,30 @@ const Countdown = ({ className }) => {
   }, []);
 
   return (
-    <div className={cn("flex items-center gap-16 w-fit mx-auto text-center", className)}>
+    <div className={cn("flex items-center gap-16 w-fit mx-auto text-center md:gap-12 sm:gap-6", className)}>
       {/* <h3 className="text-4xl font-bold mb-2">Countdown</h3> */}
       <div className="">
-        <h1 className="text-9xl font-bold mb-4">{countdown.days < 10 ? `0${countdown.days}` : countdown.days}</h1>
-        <p className="text-lg font-medium">Days</p>
+        <h1 className="text-9xl font-bold mb-4 lg:text-8xl md:text-7xl sm:text-6xl">{countdown.days < 10 ? `0${countdown.days}` : countdown.days}</h1>
+        <p className="text-lg font-medium md:text-base">Days</p>
       </div>
 
       <div className="">
-        <h1 className="text-9xl font-bold mb-4">{countdown.hours < 10 ? `0${countdown.hours}` : countdown.hours}</h1>
-        <p className="text-lg font-medium">Hours</p>
+        <h1 className="text-9xl font-bold mb-4 lg:text-8xl md:text-7xl sm:text-6xl">{countdown.hours < 10 ? `0${countdown.hours}` : countdown.hours}</h1>
+        <p className="text-lg font-medium md:text-base">Hours</p>
       </div>
 
       <div className="">
-        <h1 className="text-9xl font-bold mb-4">
+        <h1 className="text-9xl font-bold mb-4 lg:text-8xl md:text-7xl sm:text-6xl">
           {countdown.minutes < 10 ? `0${countdown.minutes}` : countdown.minutes}
         </h1>
-        <p className="text-lg font-medium">Minutes</p>
+        <p className="text-lg font-medium md:text-base">Minutes</p>
       </div>
 
       <div className="">
-        <h1 className="text-9xl font-bold mb-4">
+        <h1 className="text-9xl font-bold mb-4 lg:text-8xl md:text-7xl sm:text-6xl">
           {countdown.seconds < 10 ? `0${countdown.seconds}` : countdown.seconds}
         </h1>
-        <p className="text-lg font-medium">Seconds</p>
+        <p className="text-lg font-medium md:text-base">Seconds</p>
       </div>
     </div>
   );

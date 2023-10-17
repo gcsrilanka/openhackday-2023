@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
-import Head from "next/head";
 
 const jbmono = JetBrains_Mono({ subsets: ["latin"] });
 
@@ -16,10 +15,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
-      <Head>
-        <link rel="icon" href={metadata.favicon} />
-      </Head>
-
       <body className={cn("dark:bg-void dark:text-white", jbmono.className)}>
         <Navbar />
         {children}
