@@ -1,39 +1,17 @@
-"use client";
-
-import axios from "axios";
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
-
+import client from "@/lib/client";
 import { DataTable } from "@/components/ui/data-table";
 import { columns } from "./columns";
 
-const Leaderboard = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await axios.get("https://api.github.com/repos/axios/axios/contributors");
-
-        const contributors = response.data.map((contributor, index) => {
-          return {
-            id: contributor.id,
-            rank: index + 1,
-            contributor: contributor.login,
-            points: contributor.contributions,
-          };
-        });
-
-        setData(contributors);
-      } catch (error) {
-        setData([]);
-        console.log(error);
-      }
+const Leaderboard = async () => {
+  const response = await client.get("/contributors/hacktoberfestleaderboard");
+  const data = response.data.map(({ url, login, points }, index) => {
+    return {
+      id: index,
+      rank: index + 1,
+      contributor: login,
+      points: points,
     };
-
-    getData();
-  }, []);
+  });
 
   return (
     <div className="py-10 w-full">

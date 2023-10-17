@@ -1,8 +1,9 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import React, { useState, useEffect } from "react";
 
-const Countdown = () => {
+const Countdown = ({ className }) => {
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
@@ -23,11 +24,31 @@ const Countdown = () => {
   }, []);
 
   return (
-    <div>
-      <h3 className="text-4xl font-bold mb-2">Countdown</h3>
-      <p className="text-xl">
-        {countdown.days} days, {countdown.hours} hours, {countdown.minutes} minutes, {countdown.seconds} seconds
-      </p>
+    <div className={cn("flex items-center gap-16 w-fit mx-auto text-center", className)}>
+      {/* <h3 className="text-4xl font-bold mb-2">Countdown</h3> */}
+      <div className="">
+        <h1 className="text-9xl font-bold mb-4">{countdown.days < 10 ? `0${countdown.days}` : countdown.days}</h1>
+        <p className="text-lg font-medium">Days</p>
+      </div>
+
+      <div className="">
+        <h1 className="text-9xl font-bold mb-4">{countdown.hours < 10 ? `0${countdown.hours}` : countdown.hours}</h1>
+        <p className="text-lg font-medium">Hours</p>
+      </div>
+
+      <div className="">
+        <h1 className="text-9xl font-bold mb-4">
+          {countdown.minutes < 10 ? `0${countdown.minutes}` : countdown.minutes}
+        </h1>
+        <p className="text-lg font-medium">Minutes</p>
+      </div>
+
+      <div className="">
+        <h1 className="text-9xl font-bold mb-4">
+          {countdown.seconds < 10 ? `0${countdown.seconds}` : countdown.seconds}
+        </h1>
+        <p className="text-lg font-medium">Seconds</p>
+      </div>
     </div>
   );
 };
