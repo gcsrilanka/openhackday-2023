@@ -15,7 +15,7 @@ const HomePage = async () => {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 50 30"
-          className="h-6 w-auto absolute bottom-16 left-1/2 -translate-x-1/2 animate-pulse animate-bounce"
+          className="h-6 w-auto absolute bottom-16 left-1/2 -translate-x-1/2 animate-bounce"
         >
           <path
             className="fill-bavariangold-200"
