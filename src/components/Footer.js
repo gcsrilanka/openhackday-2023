@@ -3,8 +3,8 @@ import React from "react";
 function Footer() {
   return (
     <footer>
-      <div className="container max-w-7xl mx-auto py-6 px-5 flex flex-wrap flex-col sm:flex-row">
-        <p className=" text-manga-200 text-sm text-center sm:text-left">
+      <div className="container max-w-7xl py-6 flex flex-wrap flex-col sm:flex-row">
+        <p className=" text-manga-200 text-sm">
           Made with ❤️ by
           <a
             href="
