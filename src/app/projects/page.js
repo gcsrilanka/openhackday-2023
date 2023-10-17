@@ -15,7 +15,7 @@ const ProjectsPage = () => {
         <li>GitHub Community Sri Lanka</li>
         <li>SLIIT FOSS Community</li>
         <li>NSBM FOSS Community</li>
-        <li>J'pura FOSS Community</li>
+        <li>J&apos;pura FOSS Community</li>
         <li>UCSC Mozilla Club</li>
         <li>IEEE Student Branch of IIT</li>
       </ul>
