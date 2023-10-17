@@ -4,7 +4,7 @@ import { columns } from "./columns";
 
 const Leaderboard = async () => {
   const response = await client.get("/contributors/hacktoberfestleaderboard");
-  const data = response.data.map(({ url, login, points }, index) => {
+  const data = response.data?.map(({ url, login, points }, index) => {
     return {
       id: index,
       rank: index + 1,
