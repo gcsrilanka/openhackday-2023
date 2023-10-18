@@ -28,7 +28,7 @@ const Navbar = () => {
 
           <ul className="flex items-center gap-4 sm:hidden">
             <li>
-              <a href="https://github.com/GitHubExperts-LK" target="_blank" rel="noreferrer">
+              <a href="https://github.com/gcsrilanka" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faGithub} className="h-5" />
               </a>
             </li>
